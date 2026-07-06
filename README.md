@@ -1,4 +1,4 @@
-bxGB
+# RbxGB
 
 **RbxGB (Roblox Game Builder)** is a prototype for building and publishing Roblox games using pure XML. It is currently a proof of concept and will continue to improve over time.
 
