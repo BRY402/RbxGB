@@ -5,8 +5,10 @@ package.path = package.path..";"..module_dir.."?.lua;"..module_dir.."?/init.lua"
 
 local place = require("libs/place")
 local Classes = require("Classes")
+local Enum = require("libs/Enum")
 
 return {
     place = place,
-    Classes = Classes
+    Classes = Classes,
+    Enum = Enum
 }

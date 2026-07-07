@@ -8,6 +8,7 @@ place:setPlace(UniverseId, PlaceId)
 place:setKey("your_api_key") -- replace your_api_key with your api key
 
 local Classes = RbxGB.Classes
+local Enum = RbxGB.Enum
 
 local function newProperty(Parent, Type, Name, ...)
     local Property = Classes.TypeElements[Type]:new(...)
@@ -24,6 +25,7 @@ newProperty(Properties, "Color3", "Color", 0, .7, 0)
 newProperty(Properties, "Vector3", "Size", 2048, 10, 2048)
 newProperty(Properties, "bool", "Anchored", true)
 newProperty(Properties, "bool", "CanCollide", true)
+newProperty(Properties, "token", "Material", Enum.Material.Grass)
 
 Roblox:AddChild(workspace)
 workspace:AddChild(Baseplate)

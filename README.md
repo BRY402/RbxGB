@@ -10,6 +10,18 @@ Unlike tools that simply generate Roblox XML, RbxGB aims to let you build and pu
 
 ---
 
+## ⚠️ Warning
+
+This project interacts with Roblox's publishing APIs in automated ways. Depending on how it is used, Roblox may temporarily review your account or publishing activity.
+
+For this reason, it is recommended to use an alternate account rather than your primary development account when using RbxGB.
+
+Roblox also recommends using dedicated alternate accounts for projects that use Open Cloud API keys, as it helps isolate permissions and reduce risk. See the Roblox DevForum [announcement](https://devforum.roblox.com/t/deferred-api-key-consolidation-deprecating-group-owned-api-keys/4068530) for more information.
+
+Always ensure your use of this tool complies with Roblox's Terms of Use and other applicable policies.
+
+---
+
 ## Planned Features
 
 As the project evolves, I plan to add features such as:
@@ -21,6 +33,7 @@ As the project evolves, I plan to add features such as:
 ## Dependencies
 
 - LuaSocket
+
 ```bash
 luarocks install luasocket
 ```
