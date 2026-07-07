@@ -17,7 +17,7 @@ local tostring = tostring
 local xml = object:extend("BaseXML")
 
 function xml:tostring()
-    local Name = self.Name
+    local Name = self.Name or self.ClassName
     local str = {"<", Name}
     
     for k, v in next, self.Attributes do
@@ -25,7 +25,7 @@ function xml:tostring()
     end
         
     str[#str + 1] = ">"
-    str[#str + 1] = tostring(self.Content)
+    str[#str + 1] = tostring(self.Content == nil and "" or self.Content)
         
     for i, child in ipairs(self.Children) do
         str[#str + 1] = child:tostring()

@@ -30,8 +30,7 @@ local function addChildElements(Parent, Names, Values)
     for i, Name in ipairs(Names) do
         local Value = Values[i]
         
-        assert(type(Value) == "number", f("Invalid value for %q, expected number, got %s", Name, type(Value)))
-        local child = TypeElements.float:new(tostring(Value):upper())
+        local child = TypeElements.float:new(tostring(tonumber(Value) or 0):upper())
         child.Name = Name
         Parent:AddChild(child)
     end

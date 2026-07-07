@@ -27,7 +27,7 @@ local function UInt(bits, n)
 end
 
 local function float32(n)
-    return math.min(tonumber(Content) or 0, 1.8 * 10^38)
+    return math.min(tonumber(n) or 0, 1.8 * 10^38)
 end
 
 return {
