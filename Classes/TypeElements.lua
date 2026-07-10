@@ -5,7 +5,7 @@ local f = string.format
 local base64 = require("mime").b64
 local generateUIDS = require("deps/generateUIDS")
 local to = require("deps/to")
-local xml = require("libs/xml")
+local xml = require("libs/XML")
 local xml_escape = require("deps/xml_escape")
 
 local TypeElements = {}
@@ -40,7 +40,7 @@ end
 
 -- ZYX
 newTypeElement("Axes", function(self, Axes3Bits)
-    addChildElements({"axes"}, {to.UInt(3, Axes3Bits)}, self)
+    addChildElements(self, {"axes"}, {to.UInt(3, Axes3Bits)})
 end)
 
 newTypeElement("BinaryString", function(self, Content)
@@ -145,7 +145,7 @@ newTypeElement("NumberRange", function(self, n1, n2)
     local min = math.min(n1, n2)
     local max = math.max(n1, n2)
     
-    self:SetContent()
+    self:SetContent(tostring(min).." "..tostring(max))
 end)
 
 -- same shit as colorsequence hell no

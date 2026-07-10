@@ -1,5 +1,5 @@
 -- DefinitionElements classes, holds the logic for the xml headers
-local xml = require("libs/xml")
+local xml = require("libs/XML")
 local base64 = require("mime").b64
 
 local roblox = xml:extend("roblox")

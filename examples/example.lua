@@ -2,9 +2,9 @@ local RbxGB = require("RbxGB")
 
 local place = RbxGB.place
 
-local UniverseId = 0 -- replace 0 with the universe id of the experience
+local UniverseId = 0 -- (OPTIONAL) replace 0 with the universe id of the experience
 local PlaceId = 0 -- replace 0 with the place id of the universe you wanna update
-place:setPlace(UniverseId, PlaceId)
+place:setPlace(PlaceId, UniverseId)
 place:setKey("your_api_key") -- replace your_api_key with your api key
 
 local Classes = RbxGB.Classes

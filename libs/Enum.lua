@@ -58,7 +58,16 @@ local Material = {
     Rubber = 2311
 }
 
+local PartType = {
+    Ball = 0,
+    Block = 1,
+    Cylinder = 2,
+    Wedge = 3,
+    CornerWedge = 4
+}
+
 return {
     FontWeight = FontWeight,
-    Material = Material
+    Material = Material,
+    PartType = PartType
 }

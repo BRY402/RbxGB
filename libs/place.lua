@@ -1,4 +1,5 @@
 local API = require("libs/API")
+local http = require("socket.http")
 
 local place = {
     API_Url = "",
@@ -6,11 +7,15 @@ local place = {
     Body = ""
 }
 
-function place:setPlace(UniverseId, PlaceId)
+function place:setPlace(PlaceId, UniverseId)
+    if not UniverseId then
+        UniverseId = http.request("https://apis.roblox.com/universes/v1/places/"..PlaceId.."/universe"):match("%d+")
+    end
     self.API_Url = API.Url:gsub("{universeId}", tostring(UniverseId)):gsub("{placeId}", tostring(PlaceId))
     
     return self
 end
+
 function place:setKey(API_Key)
     API:setKey(API_Key)
     
